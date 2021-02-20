@@ -5,14 +5,21 @@ import java.util.ArrayList;
 
 public class FileReader {
 
-	public FileReader() {
-		readFiles();
+	final private String path = "./";
+	final private String extension = "pdf";
+
+	public static FileReader singleton = FileReader.getInstance();
+	private FileReader() {
+
+	}
+
+	private static FileReader getInstance() {
+		return new FileReader();
 	}
 
 	public void readFiles()
 	{
-		final String path = "./";
-		final String extension = "pdf";
+
 		ArrayList<String> returnfiles = new ArrayList<String>();
 
 		File cdirectory = new File(path);
