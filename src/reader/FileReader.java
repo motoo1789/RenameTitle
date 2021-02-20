@@ -9,6 +9,7 @@ public class FileReader {
 	final private String extension = "pdf";
 
 	public static FileReader singleton = FileReader.getInstance();
+	
 	private FileReader() {
 
 	}
