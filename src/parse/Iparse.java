@@ -1,5 +1,5 @@
 package parse;
 
 public interface Iparse {
-	void parse();
+	String parse(String keyword);
 }

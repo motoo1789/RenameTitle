@@ -3,22 +3,22 @@ package reader;
 import java.io.File;
 import java.util.ArrayList;
 
-public class FileReader {
+public class FixPDF {
 
 	final private String path = "./";
 	final private String extension = "pdf";
 
-	public static FileReader singleton = FileReader.getInstance();
-	
-	private FileReader() {
+	public static FixPDF singleton = FixPDF.getInstance();
+
+	private FixPDF() {
 
 	}
 
-	private static FileReader getInstance() {
-		return new FileReader();
+	public static FixPDF getInstance() {
+		return new FixPDF();
 	}
 
-	public void readFiles()
+	public ArrayList<String> readFiles()
 	{
 
 		ArrayList<String> returnfiles = new ArrayList<String>();
@@ -44,5 +44,12 @@ public class FileReader {
 		{
 			System.out.println("index" + index + " " +  returnfiles.get(index));
 		}
+
+		return returnfiles;
+	}
+
+	public void renamePDFTitle(String title)
+	{
+		int index = 0;
 	}
 }
