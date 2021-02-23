@@ -4,16 +4,17 @@ import parse.Iparse;
 
 public class IPSJ extends Support {
 
+
 	@Override
 	protected boolean resolve(String dlFilename) {
 		// TODO 自動生成されたメソッド・スタブ
-		return false;
+		return dlFilename.contains("IPSJ") ? true : false;
 	}
 
 	@Override
 	protected Iparse done(String dlFilename) {
 		// TODO 自動生成されたメソッド・スタブ
-		return null;
+		return singletonFactoryParse.getParce("IPSJ");
 	}
 
 }
