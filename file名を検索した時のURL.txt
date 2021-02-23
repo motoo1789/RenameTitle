@@ -1,0 +1,13 @@
+﻿IPSJ-JNL5401039
+
+https://ipsj.ixsq.nii.ac.jp/ej/index.php?action=pages_view_main
+
+https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_snippet&all=IPSJ-JNL5401039&count=20&order=0&pn=1&st=1&page_id=13&block_id=8
+
+
+IPSJ-Z81-4X-04
+https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_snippet&all=IPSJ-Z81-4X-04&count=20&order=16&pn=1&st=1&page_id=13&block_id=8
+
+
+このやり方ならAPIいらないかも
+https://ipsj.ixsq.nii.ac.jp/ej/?all=IPSJ-Z81-4X-04
