@@ -1,4 +1,9 @@
-﻿IPSJ-JNL5401039
+﻿使えそうな技術
+・ヘッドレスブラウザ
+・PhamtomJS、Selenium
+・Splash
+
+IPSJ-JNL5401039
 
 https://ipsj.ixsq.nii.ac.jp/ej/index.php?action=pages_view_main
 
@@ -11,3 +16,27 @@ https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_
 
 このやり方ならAPIいらないかも
 https://ipsj.ixsq.nii.ac.jp/ej/?all=IPSJ-Z81-4X-04
+
+
+########################################################################################################################
+
+IEEE
+https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=01019363
+
+<div _ngcontent-nun-c44="" class="col result-item-align">
+
+class="col result-item-align"
+
+最後のタグでいけそう：<span _ngcontent-gbv-c44="" xplhighlight="" xplmathjax="">
+
+
+
+########################################################################################################################
+
+J-STAGE
+
+タイトル取得：class="global-article-title"
+最後のタグでいけそう：<span _ngcontent-gbv-c44="" xplhighlight="" xplmathjax="">
+
+
+

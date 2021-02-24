@@ -10,7 +10,7 @@ import org.jsoup.select.Elements;
 
 public class InformationProcesingSocketyofJapan implements Iparse {
 
-	final String parsedivClass = "item_title pl55";
+	final String parse_divClass = "item_title pl55";
 	final private String key = "IPSJ";
 
 	@Override
