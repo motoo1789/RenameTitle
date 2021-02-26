@@ -1,11 +1,12 @@
 package cor;
 
 import parse.FactoryParse;
+import parse.InformationProcesingSocketyofJapan;
 import parse.Iparse;
 
 public abstract class Support {
 
-	Support next;
+	private Support next;
 	protected FactoryParse singletonFactoryParse = FactoryParse.getInstance();
 
 	protected abstract boolean resolve(String dlFilename);
@@ -19,19 +20,21 @@ public abstract class Support {
 
 	public final Iparse supportRename(String dlFilename){
 
+		Iparse renameInstance = null;
+
 		if(resolve(dlFilename))
 		{
-			Iparse renameInstance = done(dlFilename);
-			return renameInstance;
+			renameInstance = done(dlFilename);
 		}
 		else if(next != null)
 		{
-			next.supportRename(dlFilename);
+			renameInstance = next.supportRename(dlFilename);
 		}
 		else {
 			fail();
 		}
-		return null;
+
+		return renameInstance;
 
 	}
 

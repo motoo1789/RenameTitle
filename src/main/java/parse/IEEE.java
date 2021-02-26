@@ -10,7 +10,7 @@ import io.webfolder.ui4j.api.browser.Page;
 import io.webfolder.ui4j.api.dom.Document;
 import io.webfolder.ui4j.api.dom.Element;
 
-public class IEEE implements Iparse {
+public class IEEE implements Iparse{
 
 	final String parse_spanAttribute = "xplmathjax";
 	final private String key = "IEEE";
@@ -26,6 +26,12 @@ public class IEEE implements Iparse {
 		BrowserEngine webkit = BrowserFactory.getWebKit();
 		Page page = webkit.navigate(url + keyword);
 		//page.show();
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e1) {
+			// TODO 自動生成された catch ブロック
+			e1.printStackTrace();
+		}
 
 		Document document = page.getDocument();
 		List<Element> spanList = document.queryAll("span");
@@ -34,15 +40,17 @@ public class IEEE implements Iparse {
 		{
 			if(element.hasAttribute(parse_spanAttribute))
 			{
-				System.out.println("あった　論文名：" + element.getText());
+				System.out.println("IEEE：" + element.getText());
 				thesisTitle = element.getText();
-				System.out.println("thesisTitle：" + thesisTitle);
 				break;
 			}
 		}
-		System.out.println("return前 " + thesisTitle);
 
 		return thesisTitle;
 
+	}
+
+	public String toString() {
+		return key;
 	}
 }

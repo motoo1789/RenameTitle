@@ -9,14 +9,14 @@ public class FixPDF {
 	final private String path = "./";
 	final private String extension = "pdf";
 
-	public static FixPDF singleton = FixPDF.getInstance();
+	public static FixPDF singleton = new FixPDF();
 
 	private FixPDF() {
 
 	}
 
 	public static FixPDF getInstance() {
-		return new FixPDF();
+		return singleton;
 	}
 
 	public ArrayList<String> readFiles()
@@ -51,8 +51,8 @@ public class FixPDF {
 
 	public void renamePDFTitle(String beforeFilename, String newFilename)
 	{
-		System.out.println("before" + beforeFilename);
-		System.out.println("after" + newFilename);
+		System.out.println("before：" + beforeFilename);
+		System.out.println("after：" + newFilename);
 		File file = new File(path + beforeFilename + "." + extension);
 		file.renameTo(new File(path + newFilename + "." + extension));
 

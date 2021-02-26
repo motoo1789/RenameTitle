@@ -6,13 +6,20 @@ import java.util.ServiceLoader;
 
 public class FactoryParse {
 
-	private static FactoryParse singleton = FactoryParse.getInstance();
+	private static FactoryParse singleton = new FactoryParse();
 	private List<Iparse> parseList = new ArrayList<Iparse>();
 
 	private FactoryParse(){
 		for(Iparse parse : ServiceLoader.load(Iparse.class))
 		{
 			parseList.add(parse);
+		}
+		for(Iparse parse : parseList)
+		{
+			if(parse instanceof IEEE)
+			{
+				System.out.println("ieee");
+			}
 		}
 	}
 
