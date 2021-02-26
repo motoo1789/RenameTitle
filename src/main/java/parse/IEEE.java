@@ -1,8 +1,14 @@
 package parse;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.List;
+
 import io.webfolder.ui4j.api.browser.BrowserEngine;
 import io.webfolder.ui4j.api.browser.BrowserFactory;
 import io.webfolder.ui4j.api.browser.Page;
+import io.webfolder.ui4j.api.dom.Document;
+import io.webfolder.ui4j.api.dom.Element;
 
 public class IEEE implements Iparse {
 
@@ -22,25 +28,25 @@ public class IEEE implements Iparse {
 		BrowserEngine webkit = BrowserFactory.getWebKit();
 		Page page = webkit.navigate(url + keyword);
 
-		page.show();
+		//page.show();
 
-//		Document document = page.getDocument();
-//		String str = document.toString();
+		Document document = page.getDocument();
+//		Element bodyElement = document.getBody();
+//		String attributeElement = bodyElement.getInnerHTML();
 
-//		System.out.println(str);
-//		List elements = new List();
-//		elements = document.parseHTML(document.toString());
+		List<Element> aaa = document.queryAll("span");
 
-//		Elements element = document.getElementsByClass(parsed_divClass);
-//
-//		FileWriter fw = new FileWriter("test.txt",false);
-//		fw.write(document.html());
+		for(Element element : aaa)
+		{
+			if(element.hasAttribute(parse_spanAttribute))
+			{
+				System.out.println("あった　論文名：" + element.getText());
+				thesisTitle = element.getText();
+				break;
+			}
+		}
 
-		//element = element.ge
-
-
-
-		return null;
+		return thesisTitle;
 
 	}
 
