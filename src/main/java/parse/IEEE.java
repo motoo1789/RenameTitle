@@ -30,16 +30,19 @@ public class IEEE implements Iparse {
 		Document document = page.getDocument();
 		List<Element> spanList = document.queryAll("span");
 
+		System.out.println("forの前");
+		int index = 1;
 		for(Element spanElement : spanList)
 		{
+			System.out.println(index++);
 			if(spanElement.hasAttribute(parse_spanAttribute))
 			{
-				System.out.println("あった　論文名：" + spanElement.getText());
+
+				System.out.println("あった　論文名：");
 				thesisTitle = spanElement.getText();
-				break;
 			}
 		}
-
+		System.out.println("return前" + thesisTitle);
 		return thesisTitle;
 
 	}
