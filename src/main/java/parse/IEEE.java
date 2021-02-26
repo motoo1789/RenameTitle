@@ -13,7 +13,6 @@ import io.webfolder.ui4j.api.dom.Element;
 public class IEEE implements Iparse {
 
 	final String parse_spanAttribute = "xplmathjax";
-	final String parsed_divClass = "col result-item-align";
 	final private String key = "IPSJ";
 	private String url = "https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=";
 
@@ -22,26 +21,21 @@ public class IEEE implements Iparse {
 
 		String thesisTitle = "";
 
-
 		//Ui4j
 		//System.setProperty("ui4j.headless", "true");
 		BrowserEngine webkit = BrowserFactory.getWebKit();
 		Page page = webkit.navigate(url + keyword);
-
 		//page.show();
 
 		Document document = page.getDocument();
-//		Element bodyElement = document.getBody();
-//		String attributeElement = bodyElement.getInnerHTML();
+		List<Element> spanList = document.queryAll("span");
 
-		List<Element> aaa = document.queryAll("span");
-
-		for(Element element : aaa)
+		for(Element spanElement : spanList)
 		{
-			if(element.hasAttribute(parse_spanAttribute))
+			if(spanElement.hasAttribute(parse_spanAttribute))
 			{
-				System.out.println("あった　論文名：" + element.getText());
-				thesisTitle = element.getText();
+				System.out.println("あった　論文名：" + spanElement.getText());
+				thesisTitle = spanElement.getText();
 				break;
 			}
 		}
@@ -49,5 +43,4 @@ public class IEEE implements Iparse {
 		return thesisTitle;
 
 	}
-
 }
