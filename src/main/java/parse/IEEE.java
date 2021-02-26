@@ -1,8 +1,8 @@
 package parse;
 
+import io.webfolder.ui4j.api.browser.BrowserEngine;
 import io.webfolder.ui4j.api.browser.BrowserFactory;
 import io.webfolder.ui4j.api.browser.Page;
-import io.webfolder.ui4j.api.dom.Document;
 
 public class IEEE implements Iparse {
 
@@ -11,7 +11,6 @@ public class IEEE implements Iparse {
 	final private String key = "IPSJ";
 	private String url = "https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=";
 
-	@Override
 	public String parse(String keyword) {
 		// TODO 自動生成されたメソッド・スタブ
 
@@ -19,14 +18,16 @@ public class IEEE implements Iparse {
 
 
 		//Ui4j
-		System.setProperty("ui4j.headless","true");
-		Page page = BrowserFactory.getWebKit().navigate(url + keyword);
+		//System.setProperty("ui4j.headless", "true");
+		BrowserEngine webkit = BrowserFactory.getWebKit();
+		Page page = webkit.navigate(url + keyword);
+
 		page.show();
 
-		Document document = page.getDocument();
-		String str = document.toString();
+//		Document document = page.getDocument();
+//		String str = document.toString();
 
-		System.out.println(str);
+//		System.out.println(str);
 //		List elements = new List();
 //		elements = document.parseHTML(document.toString());
 
@@ -39,7 +40,7 @@ public class IEEE implements Iparse {
 
 
 
-		return thesisTitle;
+		return null;
 
 	}
 
