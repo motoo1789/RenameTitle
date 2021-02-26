@@ -13,7 +13,7 @@ import io.webfolder.ui4j.api.dom.Element;
 public class IEEE implements Iparse {
 
 	final String parse_spanAttribute = "xplmathjax";
-	final private String key = "IPSJ";
+	final private String key = "IEEE";
 	private String url = "https://ieeexplore.ieee.org/search/searchresult.jsp?queryText=";
 
 	public String parse(String keyword) {
