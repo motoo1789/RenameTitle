@@ -1,8 +1,9 @@
 package cor;
 
+import parse.InformationProcesingSocketyofJapan;
 import parse.Iparse;
 
-public class Cor_IPSJ extends Support {
+public class CoR_IPSJ extends Support {
 
 
 	@Override
@@ -14,7 +15,8 @@ public class Cor_IPSJ extends Support {
 	@Override
 	protected Iparse done(String dlFilename) {
 		// TODO 自動生成されたメソッド・スタブ
-		return singletonFactoryParse.getParce("IPSJ");
+		//return super.singletonFactoryParse.getParce("IPSJ");
+		return new InformationProcesingSocketyofJapan();
 	}
 
 }

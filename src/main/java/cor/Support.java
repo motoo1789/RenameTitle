@@ -6,16 +6,22 @@ import parse.Iparse;
 public abstract class Support {
 
 	Support next;
-	FactoryParse singletonFactoryParse = FactoryParse.getInstance();
+	protected FactoryParse singletonFactoryParse = FactoryParse.getInstance();
 
 	protected abstract boolean resolve(String dlFilename);
 	protected abstract Iparse done(String dlFilename);
+
+	public Support setNext(Support next) {
+
+		this.next = next;
+		return next;
+	}
 
 	public final Iparse supportRename(String dlFilename){
 
 		if(resolve(dlFilename))
 		{
-			Iparse renameInstance = next.done(dlFilename);
+			Iparse renameInstance = done(dlFilename);
 			return renameInstance;
 		}
 		else if(next != null)

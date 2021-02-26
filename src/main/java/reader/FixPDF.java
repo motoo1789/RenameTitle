@@ -1,6 +1,7 @@
 package reader;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class FixPDF {
@@ -48,8 +49,12 @@ public class FixPDF {
 		return returnfiles;
 	}
 
-	public void renamePDFTitle(String title)
+	public void renamePDFTitle(String beforeFilename, String newFilename)
 	{
-		int index = 0;
+		System.out.println("before" + beforeFilename);
+		System.out.println("after" + newFilename);
+		File file = new File(path + beforeFilename + "." + extension);
+		file.renameTo(new File(path + newFilename + "." + extension));
+
 	}
 }
