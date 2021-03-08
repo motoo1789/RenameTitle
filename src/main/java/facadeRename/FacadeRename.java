@@ -20,7 +20,7 @@ public class FacadeRename {
 
 	public FacadeRename() {
 		fileNames = new ArrayList<String>();
-		ieee.setNext(ipsj);
+		ipsj.setNext(ieee);
 	}
 
 	public void renameStart() {
@@ -36,13 +36,19 @@ public class FacadeRename {
 			fixpdf.renamePDFTitle(beforeFilename, newFilename);
 			System.out.println("1個終了");
 			System.out.println("");
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e1) {
+				// TODO 自動生成された catch ブロック
+				e1.printStackTrace();
+			}
 		}
 
 	}
 
 	private Iparse getInstance(String beforeFilename) {
 
-		return ieee.supportRename(beforeFilename);
+		return ipsj.supportRename(beforeFilename);
 
 	}
 }

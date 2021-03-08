@@ -16,8 +16,8 @@ public class CoR_IPSJ extends Support {
 	@Override
 	protected Iparse done(String dlFilename) {
 		// TODO 自動生成されたメソッド・スタブ
-		return super.singletonFactoryParse.getParce("IPSJ");
-		//return new InformationProcesingSocketyofJapan();
+		//return super.singletonFactoryParse.getParce("IPSJ");
+		return new InformationProcesingSocketyofJapan();
 	}
 
 }

@@ -10,6 +10,8 @@ public class InformationProcesingSocketyofJapan implements Iparse{
 
 	final String parse_divClass = "item_title pl55";
 	final private String key = "IPSJ";
+	private String url = "https://ipsj.ixsq.nii.ac.jp/ej/?all=";
+
 
 	public String parse(String keyword)
 	{
@@ -18,7 +20,7 @@ public class InformationProcesingSocketyofJapan implements Iparse{
 
 		try {
 
-			Document document = Jsoup.connect("https://ipsj.ixsq.nii.ac.jp/ej/?all=" + keyword).get();
+			Document document = Jsoup.connect(url + keyword).get();
 			Elements element = document.getElementsByClass("item_title pl55");
 			thesisTitle = element.text();
 			System.out.println("IPSJタイトル：" + element.text());

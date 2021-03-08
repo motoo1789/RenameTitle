@@ -4,15 +4,19 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import fix.StringFix;
+
 public class FixPDF {
 
 	final private String path = "./";
 	final private String extension = "pdf";
 
+	StringFix stringfix = StringFix.getInstance();
 	public static FixPDF singleton = new FixPDF();
 
-	private FixPDF() {
 
+	private FixPDF() {
+		System.out.println("FixPDFのインスタンスを生成");
 	}
 
 	public static FixPDF getInstance() {
@@ -51,6 +55,7 @@ public class FixPDF {
 
 	public void renamePDFTitle(String beforeFilename, String newFilename)
 	{
+		newFilename = stringfix.ReplacementInappropriateString(newFilename);
 		System.out.println("before：" + beforeFilename);
 		System.out.println("after：" + newFilename);
 		File file = new File(path + beforeFilename + "." + extension);
