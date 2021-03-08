@@ -9,6 +9,8 @@ public class Main {
 		// TODO 自動生成されたメソッド・スタブ
 		FacadeRename facaderename = new FacadeRename();
 		facaderename.renameStart();
+
+		return;
 	}
 
 }
