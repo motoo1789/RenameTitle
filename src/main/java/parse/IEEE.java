@@ -25,6 +25,7 @@ public class IEEE implements Iparse{
 	private String url = "https://ieeexplore.ieee.org/document/";
 	final String title_className = "document-title";
 
+
 	public String parse(String keyword) {
 		// TODO 自動生成されたメソッド・スタブ
 
@@ -65,6 +66,7 @@ public class IEEE implements Iparse{
 	}
 
 	public String toString() {
+		System.out.println("1111ieee");
 		return key;
 	}
 

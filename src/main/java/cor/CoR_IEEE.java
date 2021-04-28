@@ -5,6 +5,9 @@ import parse.Iparse;
 
 public class CoR_IEEE extends Support{
 
+	public CoR_IEEE() {
+		super();
+	}
 
 	@Override
 	protected boolean resolve(String dlFilename) {
@@ -19,8 +22,8 @@ public class CoR_IEEE extends Support{
 	@Override
 	protected Iparse done(String dlFilename) {
 		// TODO 自動生成されたメソッド・スタブ
-		//return super.singletonFactoryParse.getParce("IEEE");
-		return new IEEE();
+		return super.singletonFactoryParse.getParce("IEEE");
+		//return new IEEE();
 	}
 
 }

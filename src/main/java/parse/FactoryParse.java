@@ -10,16 +10,11 @@ public class FactoryParse {
 	private List<Iparse> parseList = new ArrayList<Iparse>();
 
 	private FactoryParse(){
+
 		for(Iparse parse : ServiceLoader.load(Iparse.class))
 		{
+			System.out.println(parse.toString());
 			parseList.add(parse);
-		}
-		for(Iparse parse : parseList)
-		{
-			if(parse instanceof IEEE)
-			{
-				System.out.println("ieee");
-			}
 		}
 	}
 

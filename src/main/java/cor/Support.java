@@ -7,10 +7,14 @@ import parse.Iparse;
 public abstract class Support {
 
 	private Support next;
-	protected FactoryParse singletonFactoryParse = FactoryParse.getInstance();
+	protected FactoryParse singletonFactoryParse;
 
 	protected abstract boolean resolve(String dlFilename);
 	protected abstract Iparse done(String dlFilename);
+
+	public Support() {
+		singletonFactoryParse = FactoryParse.getInstance();
+	}
 
 	public Support setNext(Support next) {
 
