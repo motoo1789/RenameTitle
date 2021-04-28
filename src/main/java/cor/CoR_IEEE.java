@@ -1,7 +1,7 @@
 package cor;
 
-import parse.IEEE;
 import parse.Iparse;
+import parse.site.IEEE;
 
 public class CoR_IEEE extends Support{
 

@@ -1,4 +1,4 @@
-package parse;
+package parse.site;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -15,6 +15,7 @@ import io.webfolder.ui4j.api.browser.BrowserFactory;
 import io.webfolder.ui4j.api.browser.Page;
 import io.webfolder.ui4j.api.dom.Document;
 import io.webfolder.ui4j.api.dom.Element;
+import parse.Iparse;
 
 public class IEEE implements Iparse{
 

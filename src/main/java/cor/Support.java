@@ -1,8 +1,8 @@
 package cor;
 
 import parse.FactoryParse;
-import parse.InformationProcesingSocketyofJapan;
 import parse.Iparse;
+import parse.site.InformationProcesingSocketyofJapan;
 
 public abstract class Support {
 

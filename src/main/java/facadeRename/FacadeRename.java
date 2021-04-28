@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import cor.CoR_IEEE;
 import cor.CoR_IPSJ;
 import cor.Support;
-import parse.IEEE;
-import parse.InformationProcesingSocketyofJapan;
 import parse.Iparse;
+import parse.site.IEEE;
+import parse.site.InformationProcesingSocketyofJapan;
 import reader.FixPDF;
 
 public class FacadeRename {

@@ -1,7 +1,7 @@
 package main;
 
 import facadeRename.FacadeRename;
-import parse.IEEE;
+import parse.site.IEEE;
 
 public class Main {
 

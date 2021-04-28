@@ -1,7 +1,7 @@
 package cor;
 
-import parse.InformationProcesingSocketyofJapan;
 import parse.Iparse;
+import parse.site.InformationProcesingSocketyofJapan;
 
 public class CoR_IPSJ extends Support {
 
