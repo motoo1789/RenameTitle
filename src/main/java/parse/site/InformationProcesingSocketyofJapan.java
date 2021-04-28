@@ -8,6 +8,7 @@ import org.jsoup.select.Elements;
 
 import parse.Iparse;
 
+//　情報処理学会
 public class InformationProcesingSocketyofJapan implements Iparse{
 
 	final String parse_divClass = "item_title pl55";

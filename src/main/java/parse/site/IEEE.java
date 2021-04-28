@@ -17,6 +17,7 @@ import io.webfolder.ui4j.api.dom.Document;
 import io.webfolder.ui4j.api.dom.Element;
 import parse.Iparse;
 
+//　IEEEエクスプローラー
 public class IEEE implements Iparse{
 
 	StringFix stringfix = StringFix.getInstance();
