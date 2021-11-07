@@ -1,7 +1,7 @@
 # RenameTitle
 
 # 概要
-情報処理学会とIEEE xploreからDLしたファイル名を変換してくれるアプリです
+情報処理学会とIEEE xploreからDLした論文のファイル名を変換してくれるアプリです
 
 # 使い方
 mavenブランチのリポジトリにあるexportフォルダをDLし
